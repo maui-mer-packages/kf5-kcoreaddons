@@ -1,0 +1,59 @@
+Name         : kf5-kcoreaddons
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Frameworks 5 Tier 1 addon with various classes on top of QtCore
+Description  : |
+  KCoreAddons provides classes built on top of QtCore to perform various tasks
+  such as manipulating mime types, autosaving files, creating backup files,
+  generating random sequences, performing text manipulations such as macro
+  replacement, accessing user information and many more.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+Requires:
+    - kf5-filesystem
+
+Files:
+    - "%doc COPYING.LIB README.md"
+    - "%{_kf5_libdir}/libKF5CoreAddons.so.*"
+    - "%{_kf5_datadir}/mime/packages/kde5.xml"
+FilesInput: kcoreaddons5_qt.lang
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications |
+        that use %{name}.
+      Files:
+          - "%{_kf5_includedir}/kcoreaddons_version.h"
+          - "%{_kf5_includedir}/KCoreAddons/"
+          - "%{_kf5_libdir}/libKF5CoreAddons.so"
+          - "%{_kf5_libdir}/cmake/KF5CoreAddons"
+          - "%{_datadir}/qt5/mkspecs/modules/qt_KCoreAddons.pri"
