@@ -18,6 +18,8 @@ Source0:    %{name}-%{version}.tar.xz
 Source100:  kf5-kcoreaddons.yaml
 Source101:  kf5-kcoreaddons-rpmlintrc
 Requires:   kf5-filesystem
+Requires(post): /sbin/ldconfig
+Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Xml)

@@ -39,6 +39,11 @@ PkgConfigBR:
 Requires:
     - kf5-filesystem
 
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
 Files:
     - "%doc COPYING.LIB README.md"
     - "%{_kf5_libdir}/libKF5CoreAddons.so.*"
