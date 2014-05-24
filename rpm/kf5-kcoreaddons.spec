@@ -29,6 +29,7 @@ BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
+BuildRequires:  shared-mime-info
 
 %description
 KCoreAddons provides classes built on top of QtCore to perform various tasks
