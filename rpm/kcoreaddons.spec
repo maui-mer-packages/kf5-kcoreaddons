@@ -80,7 +80,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc COPYING.LIB README.md
 %{_kf5_libdir}/libKF5CoreAddons.so.*
-%{_kf5_datadir}/mime/packages/kde5.xml
+%{_datadir}/mime/packages/kde5.xml
 # >> files
 # << files
 
