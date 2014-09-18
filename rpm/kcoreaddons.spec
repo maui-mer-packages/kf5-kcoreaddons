@@ -85,6 +85,7 @@ rm -rf %{buildroot}
 %files -f kcoreaddons5_qt.lang
 %defattr(-,root,root,-)
 %doc COPYING.LIB README.md
+%{_kf5_bindir}/desktoptojson
 %{_kf5_libdir}/libKF5CoreAddons.so.*
 %{_datadir}/mime/packages/kde5.xml
 # >> files

@@ -48,6 +48,7 @@ RequiresPostUn:
 
 Files:
     - "%doc COPYING.LIB README.md"
+    - "%{_kf5_bindir}/desktoptojson"
     - "%{_kf5_libdir}/libKF5CoreAddons.so.*"
     - "%{_datadir}/mime/packages/kde5.xml"
 FilesInput: kcoreaddons5_qt.lang
