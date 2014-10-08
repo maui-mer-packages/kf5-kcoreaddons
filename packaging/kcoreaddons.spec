@@ -10,7 +10,7 @@ Name:       kcoreaddons
 
 Summary:    KDE Frameworks 5 Tier 1 addon with various classes on top of QtCore
 Version:    5.3.0
-Release:    1
+Release:    2
 Group:      System/Base
 License:    GPLv2+
 URL:        http://www.kde.org
@@ -31,6 +31,7 @@ BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
+BuildRequires:  qt5-qttools-linguist
 BuildRequires:  shared-mime-info
 
 %description
