@@ -10,7 +10,6 @@ Description  : |
   generating random sequences, performing text manipulations such as macro
   replacement, accessing user information and many more.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
